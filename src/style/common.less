@@ -1,0 +1,49 @@
+@import './default.less';
+
+.container{
+  .nav-left{
+    background-color:#001529;
+    color: #ffffff;
+    height: calc(100vh);
+  }
+  .main{
+    height: calc(100vh);
+    background-color: @colorL;
+    overflow: auto;
+  }
+  .content{
+    position: relative;
+    padding: 20px;
+  }
+}
+
+
+.header {
+  background-color: @colorM;
+
+  .header-top {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: right;
+
+    .logo {
+      line-height: 60px;
+      text-align: left;
+      font-size: 18px;
+
+      img {
+        height: 40px;
+        vertical-align: middle;
+      }
+
+      span {
+        margin-left: 5px;
+      }
+    }
+
+    a {
+      margin-left: 40px;
+    }
+  }
+}
