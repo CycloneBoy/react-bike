@@ -1,5 +1,9 @@
 import React from 'react'
 import { Row,Col } from 'antd';
+import NavLeft from  './components/NavLeft'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/home'
 
 import './style/common.less'
 class Admin extends React.Component{
@@ -8,16 +12,15 @@ class Admin extends React.Component{
         return (
             <Row className="container">
                 <Col  span="4" className="nav-left">
-                    <p>navleft</p>
+                    <NavLeft/>
                 </Col>
                 <Col span="20" className="main">
-                    <p>header</p>
+                    <Header/>
                     <Row className="content">
-                        {/* <Home/> */}
-                        <p>main</p>
+                         <Home/>
                         {this.props.children}
                     </Row>
-                    <p>footer</p>
+                    <Footer/>
                 </Col>
             </Row>
         );
