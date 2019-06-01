@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu, Icon } from 'antd';
+import { Menu, Icon,Button  } from 'antd';
 import { NavLink } from 'react-router-dom'
 
 import MenuConfig from '../../config/menuConfig'
@@ -8,7 +8,8 @@ const SubMenu = Menu.SubMenu;
 
 class NavLeft extends React.Component {
     state = {
-        currentKey: ''
+        currentKey: '',
+        collapsed: false,
     }
 
     componentWillMount() {
@@ -17,6 +18,12 @@ class NavLeft extends React.Component {
             menuTreeNode
         })
     }
+
+    toggleCollapsed = () => {
+        this.setState({
+            collapsed: !this.state.collapsed,
+        });
+    };
 
     // 菜单渲染
     renderMenu = (data) =>{
@@ -55,11 +62,15 @@ class NavLeft extends React.Component {
                     <div className="logo">
                         <img src="/assets/logo-ant.svg" alt=""/>
                         <h1>环球车队</h1>
+                        {/*<Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>*/}
+                            {/*<Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />*/}
+                        {/*</Button>*/}
                     </div>
                 </NavLink>
                 <Menu
                     onClick={this.handleClick}
-                    theme="dark">
+                    theme="dark"
+                    inlineCollapsed={this.state.collapsed}>
                     {this.state.menuTreeNode}
                 </Menu>
             </div>

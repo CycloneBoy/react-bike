@@ -7,6 +7,8 @@ import OrderDetail from './pages/order/detail'
 import Admin from "./admin";
 import Home from "./pages/home";
 import Gallery from "./pages/ui/gallery";
+import FormLogin from "./pages/form/login";
+import FormRegister from "./pages/form/register";
 
 const ERouter = () => {
     return (
@@ -24,6 +26,8 @@ const ERouter = () => {
                             <Switch>
                                 <Route path="/home" component={Home}/>
                                 <Route path="/ui/gallery" component={Gallery} />
+                                <Route path="/form/login" component={FormLogin} />
+                                <Route path="/form/reg" component={FormRegister} />
                                 <Redirect to="/home" />
                             </Switch>
                         </Admin>
