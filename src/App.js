@@ -6,12 +6,9 @@ import Admin from './admin'
 class App extends React.Component {
   render() {
     return (
-        <div className="App">
-          {/*<Button type="primary">Button</Button>*/}
             <div>
                 {this.props.children}
             </div>
-        </div>
     );
   }
 }

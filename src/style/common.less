@@ -1,5 +1,16 @@
 @import './default.less';
-
+@import './loading.less';
+ul,li{
+  list-style: none;
+}
+.clearfix{
+  &::after{
+    content:' ';
+    clear:both;
+    display: block;
+    visibility: hidden;
+  }
+}
 .container{
   .nav-left{
     background-color:#001529;
@@ -26,34 +37,8 @@
     margin-right: -2px;
   }
 }
-
-
-.header {
-  background-color: @colorM;
-
-  .header-top {
-    height: 60px;
-    line-height: 60px;
-    padding: 0 20px;
-    text-align: right;
-
-    .logo {
-      line-height: 60px;
-      text-align: left;
-      font-size: 18px;
-
-      img {
-        height: 40px;
-        vertical-align: middle;
-      }
-
-      span {
-        margin-left: 5px;
-      }
-    }
-
-    a {
-      margin-left: 40px;
-    }
+.ant-card{
+  button{
+    margin-right: 10px;
   }
 }

@@ -6,6 +6,7 @@ import Common from './common'
 import OrderDetail from './pages/order/detail'
 import Admin from "./admin";
 import Home from "./pages/home";
+import Gallery from "./pages/ui/gallery";
 
 const ERouter = () => {
     return (
@@ -22,6 +23,7 @@ const ERouter = () => {
                         <Admin>
                             <Switch>
                                 <Route path="/home" component={Home}/>
+                                <Route path="/ui/gallery" component={Gallery} />
                                 <Redirect to="/home" />
                             </Switch>
                         </Admin>

@@ -33,13 +33,12 @@ class NavLeft extends React.Component {
                     </SubMenu>
                 )
             }
-            return <Menu.Item
-                key={item.key}
-                title={item.title}
-                >
-                <Icon type={item.icon}/>
-                {/*<NavLink to={item.key}>{item.title}</NavLink>*/}
-                {item.title}
+            return <Menu.Item key={item.key} title={item.title}>
+
+                <NavLink to={item.key}>
+                    <Icon type={item.icon}/>{item.title}
+                </NavLink>
+                {/*{item.title}*/}
             </Menu.Item>
 
         })
@@ -52,12 +51,12 @@ class NavLeft extends React.Component {
     render() {
         return (
             <div>
-                {/*<NavLink to="/home" onClick={this.homeHandleClick}>*/}
+                <NavLink to="/home" onClick={this.homeHandleClick}>
                     <div className="logo">
                         <img src="/assets/logo-ant.svg" alt=""/>
                         <h1>环球车队</h1>
                     </div>
-                {/*</NavLink>*/}
+                </NavLink>
                 <Menu
                     onClick={this.handleClick}
                     theme="dark">

@@ -51,10 +51,12 @@ const menuList = [
             {
                 title: '登录',
                 key: '/form/login',
+                icon: 'home',
             },
             {
                 title: '注册',
                 key: '/form/reg',
+                icon: 'home',
             }
         ]
     },
