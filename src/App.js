@@ -9,9 +9,7 @@ class App extends React.Component {
         <div className="App">
           {/*<Button type="primary">Button</Button>*/}
             <div>
-                <div>
-                    <Admin/>
-                </div>
+                {this.props.children}
             </div>
         </div>
     );
