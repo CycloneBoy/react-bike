@@ -11,6 +11,7 @@ import FormLogin from "./pages/form/login";
 import FormRegister from "./pages/form/register";
 import HighTable from "./pages/table/highTable";
 import BasicTable from "./pages/table/basicTable";
+import City from "./pages/city";
 
 export default class ERouter extends React.Component{
 
@@ -34,6 +35,7 @@ export default class ERouter extends React.Component{
                                     <Route path="/form/reg" component={FormRegister} />
                                     <Route path="/table/basic" component={BasicTable} />
                                     <Route path="/table/high" component={HighTable} />
+                                    <Route path="/city" component={City} />
                                     <Redirect to="/home" />
                                 </Switch>
                             </Admin>
