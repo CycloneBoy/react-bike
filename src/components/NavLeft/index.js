@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu, Icon,Button  } from 'antd';
+import { Menu, Icon  } from 'antd';
 import { NavLink } from 'react-router-dom'
 
 import MenuConfig from '../../config/menuConfig'
@@ -10,7 +10,7 @@ class NavLeft extends React.Component {
     state = {
         currentKey: '',
         collapsed: false,
-    }
+    };
 
     componentWillMount() {
         const menuTreeNode = this.renderMenu(MenuConfig);
@@ -18,12 +18,6 @@ class NavLeft extends React.Component {
             menuTreeNode
         })
     }
-
-    toggleCollapsed = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        });
-    };
 
     // 菜单渲染
     renderMenu = (data) =>{
@@ -49,12 +43,12 @@ class NavLeft extends React.Component {
             </Menu.Item>
 
         })
-    }
+    };
 
     homeHandleClick = () =>{
         // const {dispatch} = this.props;
         // dispatch()
-    }
+    };
     render() {
         return (
             <div>

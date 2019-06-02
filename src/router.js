@@ -9,33 +9,40 @@ import Home from "./pages/home";
 import Gallery from "./pages/ui/gallery";
 import FormLogin from "./pages/form/login";
 import FormRegister from "./pages/form/register";
+import HighTable from "./pages/table/highTable";
+import BasicTable from "./pages/table/basicTable";
 
-const ERouter = () => {
-    return (
-       <HashRouter>
-           <App>
-               <Switch>
-                   <Route path="/login" component={Login}/>
-                   <Route path="/common" render={ ()=>
-                       <Common>
-                           <Route path="/common/order/detail/:orderId" component={OrderDetail} />
-                       </Common>
-                   }/>
-                    <Route path="/" render={()=>
-                        <Admin>
-                            <Switch>
-                                <Route path="/home" component={Home}/>
-                                <Route path="/ui/gallery" component={Gallery} />
-                                <Route path="/form/login" component={FormLogin} />
-                                <Route path="/form/reg" component={FormRegister} />
-                                <Redirect to="/home" />
-                            </Switch>
-                        </Admin>
-                    }/>
-               </Switch>
-           </App>
-       </HashRouter>
-    );
-};
+export default class ERouter extends React.Component{
 
-export default ERouter;
+    render() {
+        return (
+            <HashRouter>
+                <App>
+                    <Switch>
+                        <Route path="/login" component={Login}/>
+                        <Route path="/common" render={ ()=>
+                            <Common>
+                                <Route path="/common/order/detail/:orderId" component={OrderDetail} />
+                            </Common>
+                        }/>
+                        <Route path="/" render={()=>
+                            <Admin>
+                                <Switch>
+                                    <Route path="/home" component={Home}/>
+                                    <Route path="/ui/gallery" component={Gallery} />
+                                    <Route path="/form/login" component={FormLogin} />
+                                    <Route path="/form/reg" component={FormRegister} />
+                                    <Route path="/table/basic" component={BasicTable} />
+                                    <Route path="/table/high" component={HighTable} />
+                                    <Redirect to="/home" />
+                                </Switch>
+                            </Admin>
+                        }/>
+                    </Switch>
+                </App>
+            </HashRouter>
+        );
+    };
+
+}
+
