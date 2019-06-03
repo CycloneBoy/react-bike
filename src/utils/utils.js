@@ -1,6 +1,9 @@
 /**
  * 工具类
  */
+import { Select} from "antd";
+import React from "react";
+const Option = Select.Option;
 export default {
     // 日期格式化
     formateDate(time){
@@ -55,7 +58,57 @@ export default {
         }
     },
 
+    // 状态词典
+    cityConfig(state){
+        let config =  {
+            "0":"全部",
+            "1":"北京市",
+            "2":"天津市",
+            "3":"深圳市",
+            "4":"武汉市",
+            "5":"长沙市",
+            "6":"其它"
+        };
+        return config[state]
+    },
 
+    // 用车模式词典
+    carModeConfig(state){
+        let config =  {
+            "0":"全部",
+            "1":"指定停车点模式",
+            "2":"禁停区模式",
+        };
+        return config[state]
+    },
+
+    // 营运模式词典
+    opModeConfig(state){
+        let config =  {
+            "0":"全部",
+            "1":"自营",
+            "2":"加盟",
+        };
+        return config[state]
+    },
+
+    // 加盟商授权状态词典
+    authStatusConfig(state){
+        let config =  {
+            "0":"全部",
+            "1":"已授权",
+            "2":"未授权",
+        };
+        return config[state]
+    },
+
+    getSelectOption(list){
+        let opList = []
+         list.map((item,index)=>{
+             opList.push( "<Option value=" + item.key+ ">" + item.value_+"</Option>")
+        });
+        return opList;
+    },
 
 
 }
