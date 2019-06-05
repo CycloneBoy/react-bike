@@ -1,6 +1,19 @@
 # react-bick
 > react和antd 学习
+项目体验地址：https://cycloneboy.github.io/react-bike/
+## 项目截图
+### 后台
+#### 城市列表
+![城市列表](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/%E5%9F%8E%E5%B8%82%E7%AE%A1%E7%90%86-2019-06-04_001107.png)
+#### 开通城市
+![开通城市](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/%E5%BC%80%E9%80%9A%E5%9F%8E%E5%B8%82-2019-06-04_001146.png)
+#### 表单
+![添加登录和注册表单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/register-form-2019-06-01_230658.png)
+
 ## 项目初始
+### 2019-06-05
+1. 添加github-page
+
 ### 2019-06-03
 1. 添加开通城市
 2. 添加基础过滤表格封装
