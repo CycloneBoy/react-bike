@@ -1,6 +1,7 @@
 # react-bick
 > react和antd 学习
-项目体验地址：https://cycloneboy.github.io/react-bike/
+- 项目体验地址：https://cycloneboy.github.io/react-bike/
+- 项目wiki地址： https://github.com/CycloneBoy/react-bike/wiki
 ## 项目截图
 ### 后台
 #### 城市列表
