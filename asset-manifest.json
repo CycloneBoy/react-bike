@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-bike/static/css/main.d6e3773d.chunk.css",
+    "main.js": "/react-bike/static/js/main.e6bee9dd.chunk.js",
+    "main.js.map": "/react-bike/static/js/main.e6bee9dd.chunk.js.map",
+    "runtime~main.js": "/react-bike/static/js/runtime~main.3a1c3d06.js",
+    "runtime~main.js.map": "/react-bike/static/js/runtime~main.3a1c3d06.js.map",
+    "static/css/2.c9274424.chunk.css": "/react-bike/static/css/2.c9274424.chunk.css",
+    "static/js/2.f2279d5b.chunk.js": "/react-bike/static/js/2.f2279d5b.chunk.js",
+    "static/js/2.f2279d5b.chunk.js.map": "/react-bike/static/js/2.f2279d5b.chunk.js.map",
+    "index.html": "/react-bike/index.html",
+    "precache-manifest.16346f31eb8ce0bcf712c2d0a6ebd70a.js": "/react-bike/precache-manifest.16346f31eb8ce0bcf712c2d0a6ebd70a.js",
+    "service-worker.js": "/react-bike/service-worker.js",
+    "static/css/2.c9274424.chunk.css.map": "/react-bike/static/css/2.c9274424.chunk.css.map",
+    "static/css/main.d6e3773d.chunk.css.map": "/react-bike/static/css/main.d6e3773d.chunk.css.map"
+  }
+}
