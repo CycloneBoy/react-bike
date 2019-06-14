@@ -95,18 +95,27 @@ export default class Order extends React.Component{
 
     // 打开订单详情页面
     openOrderDetail = ()=>{
-        let item = this.checkSelectItem();
+        let item = this.state.selectedItem;
         if (!item) {
-            window.open(`/#/common/order/detail/${item.id}`,'_blank')
-        }
+            Modal.info({
+                title: '信息',
+                content: '请先选择一条订单'
+            });
+            return;
+        };
+        window.open(`/#/common/order/detail/${item.id}`,'_blank')
     };
 
     // 订单结束确认
     handleConfirm = ()=>{
-        let item = this.checkSelectItem();
+        let item = this.state.selectedItem;
         if (!item) {
+            Modal.info({
+                title: '信息',
+                content: '请先选择一条订单'
+            });
             return;
-        }
+        };
         axios.ajax({
             url:'/order/stop',
             method:'PUT',
@@ -148,7 +157,7 @@ export default class Order extends React.Component{
         this.setState({
             selectedRowKeys: selectKey,
             selectedItem: record
-        })
+        });
     };
 
     handleModify =(item) =>{

@@ -19,7 +19,7 @@ export default {
         }
         let options = []; //[<Option value="0" key="all_key">全部</Option>];
         data.map((item)=>{
-            options.push(<Option value={item['id']} key={item['id}']}>{item['name']}</Option>)
+            options.push(<Option value={item.id} key={item.id}>{item.name}</Option>)
         });
         return options;
     },
