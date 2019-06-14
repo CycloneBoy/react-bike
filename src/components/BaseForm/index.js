@@ -34,7 +34,7 @@ class FilterForm extends React.Component{
                 let width = item.width;
                 switch (item.type) {
                     case '时间查询':{
-                        const begin_time = <FormItem label={label} key={field}>
+                        const begin_time = <FormItem label={label} key={field+"1"}>
                             {
                                 getFieldDecorator('beginTime')(
                                     <DatePicker showTime={true} placeholder={placeholder} format="YYYY-MM-DD HH:mm:ss"/>
@@ -42,7 +42,7 @@ class FilterForm extends React.Component{
                             }
                         </FormItem>;
                         formItemList.push(begin_time)
-                        const end_time = <FormItem label="~" colon={false} key={field}>
+                        const end_time = <FormItem label="~" colon={false} key={field+"2"}>
                             {
                                 getFieldDecorator('endTime')(
                                     <DatePicker showTime={true} placeholder={placeholder} format="YYYY-MM-DD HH:mm:ss" />

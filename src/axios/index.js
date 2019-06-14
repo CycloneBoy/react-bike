@@ -8,10 +8,11 @@ export default class Axios {
            JsonP(options.url, {
                param: 'callback'
            },function (err, response) {
-               if (response.status === 'success') {
+               if (response && response.status === 'success') {
                    resolve(response);
                } else {
-                   reject(response.messsage);
+                   console.error("get data from jsonp error！")
+                   reject(response);
                }
            })
         } )
@@ -37,7 +38,7 @@ export default class Axios {
                     loading = document.getElementById('ajaxLoading');
                     loading.style.display = 'none';
                 }
-                if (response.status == '200'){
+                if (response !== null && response.status == '200'){
                     // console.log("response:" + response.data.result)
                     let res = response.data;
                     if (res.code == '0'){

@@ -19,9 +19,20 @@ export default {
         }
         let options = []; //[<Option value="0" key="all_key">全部</Option>];
         data.map((item)=>{
-            options.push(<Option value={item.id} key={item.id}>{item.name}</Option>)
+            options.push(<Option value={item['id']} key={item['id}']}>{item['name']}</Option>)
         });
         return options;
+    },
+
+    // 状态词典
+    getDicValue(list,key){
+        var value;
+        list.forEach(function (item) {
+            if(item['id'] === key.toString()) {
+                value =  item['name'];
+            }
+        });
+        return value
     },
 
     // 状态词典
@@ -70,18 +81,22 @@ export default {
         }
     },
 
+    // 城市词典
+    getCityList(){
+        return  [
+            { id: '0', name: '全部' },
+            { id: '1', name: '北京' },
+            { id: '2', name: '天津' },
+            { id: '3', name: '深圳' },
+            { id: '4', name: '武汉' },
+            { id: '5', name: '长沙' },
+            { id: '6', name: '其他' }
+        ];
+    },
+
     // 状态词典
-    cityConfig(state){
-        let config =  {
-            "0":"全部",
-            "1":"北京市",
-            "2":"天津市",
-            "3":"深圳市",
-            "4":"武汉市",
-            "5":"长沙市",
-            "6":"其它"
-        };
-        return config[state]
+    cityDic(state){
+        return this.getDicValue(this.getCityList(),state);
     },
 
     // 用车模式词典
@@ -121,6 +136,21 @@ export default {
         });
         return opList;
     },
+
+    // 订单状态
+    getOrderStatusList(){
+        return  [
+            { id: '0', name: '全部' },
+            { id: '1', name: '进行中' },
+            { id: '2', name: '结束行程' }
+            ];
+    },
+
+    // 订单状态词典
+    orderStatusDic(state){
+         return this.getDicValue(this.getOrderStatusList(),state);
+    },
+
 
 
 }
