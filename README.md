@@ -12,6 +12,11 @@
 ![添加登录和注册表单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/register-form-2019-06-01_230658.png)
 
 ## 项目初始
+### 2019-06-15
+1. 添加城市管理
+2. 添加訂單詳情
+3. 添加.gitignore文件
+
 ### 2019-06-05
 1. 添加github-page
 
