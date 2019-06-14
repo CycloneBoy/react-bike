@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.idea/
+package-lock.json
+src/components/Footer/index.css
+src/components/Footer/index.css.map
+src/components/Header/index.css
+src/components/Header/index.css.map
+src/components/NavLeft/index.css
+src/components/NavLeft/index.css.map
+src/pages/home/index.css
+src/pages/home/index.css.map
+src/pages/login/index.css
+src/pages/login/index.css.map
+src/pages/order/detail.css
+src/pages/order/detail.css.map
+src/style/common.css
+src/style/common.css.map
+
