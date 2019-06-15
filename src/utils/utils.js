@@ -19,49 +19,86 @@ export default {
         }
         let options = []; //[<Option value="0" key="all_key">全部</Option>];
         data.map((item)=>{
-            options.push(<Option value={item.id} key={item.id}>{item.name}</Option>)
+            options.push(<Option value={parseInt(item.id)} key={item.id}>{item.name}</Option>)
         });
         return options;
     },
 
-    // 状态词典
+    // 获取domainUrl
+    getDomainUrl(){
+        var url = document.location.toString();
+        var hostUrl = url.split("#");
+        return hostUrl[0]
+    },
+
+    // 获取词典值
     getDicValue(list,key){
         var value;
         list.forEach(function (item) {
-            if(item['id'] === key.toString()) {
+            if(item['id'] === String(key)) {
                 value =  item['name'];
             }
         });
         return value
     },
 
+    /**
+     * ETable 行点击通用函数
+     * @param {*选中行的索引} selectedRowKeys
+     * @param {*选中行对象} selectedItem
+     */
+    updateSelectedItem(selectedRowKeys, selectedRows, selectedIds) {
+        if (selectedIds) {
+            this.setState({
+                selectedRowKeys,
+                selectedIds: selectedIds,
+                selectedItem: selectedRows
+            })
+        } else {
+            this.setState({
+                selectedRowKeys,
+                selectedItem: selectedRows
+            })
+        }
+    },
+
+    // 获取状态列表
+    getStateList(){
+        return  [
+            { id: '0', name: '保密' },
+            { id: '1', name: '工作' },
+            { id: '2', name: '学习' },
+            { id: '3', name: '休息' },
+            { id: '4', name: '旅行' },
+            { id: '5', name: '创业' },
+            { id: '6', name: '其它' },
+        ];
+    },
+
     // 状态词典
-    stateConfig(state){
-        let config =  {
-            "1":"工作",
-            "2":"学习",
-            "3":"休息",
-            "4":"旅行",
-            "5":"创业",
-            "6":"其它"
-        };
-        return config[state]
+    stateDic(state){
+        return this.getDicValue(this.getStateList(),state);
+    },
+
+    // 获取状态列表
+    getInterestList(){
+        return  [
+            { id: '0', name: '骑行' },
+            { id: '1', name: '跑步' },
+            { id: '2', name: '打球' },
+            { id: '3', name: '玩游"' },
+            { id: '4', name: '徒步' },
+            { id: '5', name: '创业' },
+            { id: '6', name: '看剧' },
+            { id: '7', name: '学习' },
+            { id: '8', name: '读书' },
+            { id: '9', name: '其他' },
+        ];
     },
 
     // 爱好词典
-    interestConfig(interest){
-        let config =  {
-            "1":"骑行",
-            "2":"跑步",
-            "3":"打球",
-            "4":"玩游",
-            "5":"徒步",
-            "6":"看剧",
-            "7":"学习",
-            "8":"读书",
-            "9":"其他",
-        };
-        return config[interest]
+    interestDic(state){
+        return this.getDicValue(this.getInterestList(),state);
     },
 
     // 表格分页封装

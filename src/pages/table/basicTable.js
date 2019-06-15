@@ -142,7 +142,7 @@ export default class BasicTable  extends React.Component{
                 dataIndex: 'state',
                 key: 'state',
                 render(state){
-                    return Utils.stateConfig(state);
+                    return Utils.stateDic(state);
                 }
             },
             {
@@ -150,7 +150,7 @@ export default class BasicTable  extends React.Component{
                 dataIndex: 'interest',
                 key: 'state',
                 render(interest){
-                    return Utils.interestConfig(interest);
+                    return Utils.interestDic(interest);
                 }
             },
             {

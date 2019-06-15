@@ -4,14 +4,21 @@
 - 项目wiki地址： https://github.com/CycloneBoy/react-bike/wiki
 ## 项目截图
 ### 后台
-#### 城市列表
-![城市列表](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/%E5%9F%8E%E5%B8%82%E7%AE%A1%E7%90%86-2019-06-04_001107.png)
+#### 城市列表 
+![城市列表](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/city-2019-06-04_001107.png)
 #### 开通城市
-![开通城市](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/%E5%BC%80%E9%80%9A%E5%9F%8E%E5%B8%82-2019-06-04_001146.png)
+![开通城市](https://github.com/CycloneBoy/react-bike/blob/masterpublic/wiki/city-open-2019-06-04_001146.png)
 #### 表单
 ![添加登录和注册表单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/register-form-2019-06-01_230658.png)
+#### 订单管理
+![订单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/order- 2019-06-04_001231.png)
+
 
 ## 项目初始
+### 2019-06-16
+1. 添加用户管理
+2. 添加基础表格封装
+
 ### 2019-06-15
 1. 添加城市管理
 2. 添加訂單詳情
