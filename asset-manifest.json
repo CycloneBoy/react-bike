@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-bike/static/css/main.3def7203.chunk.css",
-    "main.js": "/react-bike/static/js/main.4a1f88b9.chunk.js",
-    "main.js.map": "/react-bike/static/js/main.4a1f88b9.chunk.js.map",
+    "main.css": "/react-bike/static/css/main.bef33d20.chunk.css",
+    "main.js": "/react-bike/static/js/main.463a8be9.chunk.js",
+    "main.js.map": "/react-bike/static/js/main.463a8be9.chunk.js.map",
     "runtime~main.js": "/react-bike/static/js/runtime~main.3a1c3d06.js",
     "runtime~main.js.map": "/react-bike/static/js/runtime~main.3a1c3d06.js.map",
-    "static/css/2.33f63ba7.chunk.css": "/react-bike/static/css/2.33f63ba7.chunk.css",
-    "static/js/2.52fd3a30.chunk.js": "/react-bike/static/js/2.52fd3a30.chunk.js",
-    "static/js/2.52fd3a30.chunk.js.map": "/react-bike/static/js/2.52fd3a30.chunk.js.map",
+    "static/css/2.4bffc784.chunk.css": "/react-bike/static/css/2.4bffc784.chunk.css",
+    "static/js/2.af41c19c.chunk.js": "/react-bike/static/js/2.af41c19c.chunk.js",
+    "static/js/2.af41c19c.chunk.js.map": "/react-bike/static/js/2.af41c19c.chunk.js.map",
     "index.html": "/react-bike/index.html",
-    "precache-manifest.2036aa3c4fc92815bba8451a28e5f8b5.js": "/react-bike/precache-manifest.2036aa3c4fc92815bba8451a28e5f8b5.js",
+    "precache-manifest.33f02e9d893972ab92f3476fa124c558.js": "/react-bike/precache-manifest.33f02e9d893972ab92f3476fa124c558.js",
     "service-worker.js": "/react-bike/service-worker.js",
-    "static/css/2.33f63ba7.chunk.css.map": "/react-bike/static/css/2.33f63ba7.chunk.css.map",
-    "static/css/main.3def7203.chunk.css.map": "/react-bike/static/css/main.3def7203.chunk.css.map"
+    "static/css/2.4bffc784.chunk.css.map": "/react-bike/static/css/2.4bffc784.chunk.css.map",
+    "static/css/main.bef33d20.chunk.css.map": "/react-bike/static/css/main.bef33d20.chunk.css.map"
   }
 }
