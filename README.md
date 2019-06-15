@@ -7,11 +7,11 @@
 #### 城市列表 
 ![城市列表](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/city-2019-06-04_001107.png)
 #### 开通城市
-![开通城市](https://github.com/CycloneBoy/react-bike/blob/masterpublic/wiki/city-open-2019-06-04_001146.png)
+![开通城市](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/city-open-2019-06-04_001146.png)
 #### 表单
 ![添加登录和注册表单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/register-form-2019-06-01_230658.png)
 #### 订单管理
-![订单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/order- 2019-06-04_001231.png)
+![订单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/order-2019-06-04_001231.png)
 
 
 ## 项目初始
