@@ -12,6 +12,12 @@
 ![添加登录和注册表单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/register-form-2019-06-01_230658.png)
 #### 订单管理
 ![订单](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/order-2019-06-04_001231.png)
+#### 用户管理
+- ![用户列表](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/user-2019-06-16_000039.png)
+- ![增加用户](https://github.com/CycloneBoy/react-bike/blob/master/publicpublic/wiki/user-add-2019-06-16_000102.png)
+- ![修改用户](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/user-edit-2019-06-16_000123.png)
+- ![用户详情](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/user-detail-2019-06-16_000143.png)
+- ![删除用户](https://github.com/CycloneBoy/react-bike/blob/master/public/wiki/user-delete-2019-06-16_000201.png)
 
 
 ## 项目初始
