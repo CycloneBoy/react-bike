@@ -180,8 +180,8 @@ export default {
          return this.getDicValue(this.getOrderStatusList(),state);
     },
 
-    // 获取echart注册名称
-    getEchartRegisterThemeName(){
+    // 获取echarts注册名称
+    getEchartsRegisterThemeName(){
         return "echartsTheme"
     },
 

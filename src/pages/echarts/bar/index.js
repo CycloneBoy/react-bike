@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'antd'
+import {Card} from 'antd'
 import ReactEcharts from 'echarts-for-react';
 import echartTheme from '../echartTheme'
 // import echarts from 'echarts'
@@ -19,15 +19,15 @@ export default class Bar extends React.Component {
     state={};
 
     componentWillMount(){
-        echarts.registerTheme('Imooc',echartTheme);
+        echarts.registerTheme(Utils.getEchartsRegisterThemeName(),echartTheme);
     }
 
     getOption(){
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             xAxis: {
@@ -59,20 +59,19 @@ export default class Bar extends React.Component {
                     ]
                 }
             ]
-        }
-        return option;
+        };
     }
 
     getOption2(){
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
-            legend:{
-                data:['OFO','摩拜','小蓝']
+            legend: {
+                data: ['OFO', '摩拜', '小蓝']
             },
             xAxis: {
                 data: [
@@ -129,8 +128,7 @@ export default class Bar extends React.Component {
                     ]
                 },
             ]
-        }
-        return option;
+        };
     }
 
     render(){
@@ -138,12 +136,12 @@ export default class Bar extends React.Component {
             <div>
                 <Card title="柱形图表之一">
                     <ReactEcharts option={this.getOption()}
-                                  theme={Utils.getEchartRegisterThemeName()}
+                                  theme={Utils.getEchartsRegisterThemeName()}
                                   notMerge={true} lazyUpdate={true} style={{ height: 500 }} />
                 </Card>
                 <Card title="柱形图表之二" style={{marginTop:10}}>
                     <ReactEcharts option={this.getOption2()}
-                                  theme={Utils.getEchartRegisterThemeName()}
+                                  theme={Utils.getEchartsRegisterThemeName()}
                                   notMerge={true} lazyUpdate={true} style={{ height: 500 }} />
                 </Card>
             </div>

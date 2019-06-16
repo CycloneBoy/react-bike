@@ -12,43 +12,44 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
 import 'echarts/lib/component/legend';
 import 'echarts/lib/component/markPoint';
+
 export default class Pie extends React.Component {
 
-    state = {}
+    state = {};
 
     componentWillMount(){
-        echarts.registerTheme(Utils.getEchartRegisterThemeName(),themeLight);
+        echarts.registerTheme(Utils.getEchartsRegisterThemeName(),themeLight);
     }
 
     getOption() {
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单',
-                x : 'center'
+                x: 'center'
             },
-            legend : {
+            legend: {
                 orient: 'vertical',
                 right: 10,
                 top: 20,
                 bottom: 20,
-                data: ['周一','周二','周三','周四','周五','周六','周日']
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
             },
             tooltip: {
-                trigger : 'item',
-                formatter : "{a} <br/>{b} : {c} ({d}%)"
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             series: [
                 {
-                    name : '订单量',
-                    type : 'pie',
-                    radius : '55%',
-                    center : [
+                    name: '订单量',
+                    type: 'pie',
+                    radius: '55%',
+                    center: [
                         '50%', '60%'
                     ],
-                    data:[
+                    data: [
                         {
-                            value:1000,
-                            name:'周一'
+                            value: 1000,
+                            name: '周一'
                         },
                         {
                             value: 1000,
@@ -75,7 +76,7 @@ export default class Pie extends React.Component {
                             name: '周日'
                         },
                     ],
-                    itemStyle : {
+                    itemStyle: {
                         emphasis: {
                             shadowBlur: 10,
                             shadowOffsetX: 0,
@@ -84,12 +85,11 @@ export default class Pie extends React.Component {
                     }
                 }
             ]
-        }
-        return option;
+        };
     }
 
     getOption2() {
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单',
                 x: 'center'
@@ -154,12 +154,11 @@ export default class Pie extends React.Component {
                     }
                 }
             ]
-        }
-        return option;
+        };
     }
 
     getOption3() {
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单',
                 x: 'center'
@@ -214,7 +213,9 @@ export default class Pie extends React.Component {
                             value: 1200,
                             name: '周日'
                         }
-                    ].sort(function (a, b) { return a.value - b.value; }),
+                    ].sort(function (a, b) {
+                        return a.value - b.value;
+                    }),
                     roseType: 'radius',
                     animationType: 'scale',
                     animationEasing: 'elasticOut',
@@ -223,8 +224,7 @@ export default class Pie extends React.Component {
                     }
                 }
             ]
-        }
-        return option;
+        };
     }
 
     render() {
@@ -233,7 +233,7 @@ export default class Pie extends React.Component {
                 <Card title="饼形图表之一">
                     <ReactEcharts
                         option={this.getOption()}
-                        theme={Utils.getEchartRegisterThemeName()}
+                        theme={Utils.getEchartsRegisterThemeName()}
                         notMerge={true}
                         lazyUpdate={true}
                         style={{ height: 500 }}/>
@@ -241,7 +241,7 @@ export default class Pie extends React.Component {
                 <Card title="饼形图之二" style={{marginTop:10}}>
                     <ReactEcharts
                         option={this.getOption2()}
-                        theme={Utils.getEchartRegisterThemeName()}
+                        theme={Utils.getEchartsRegisterThemeName()}
                         notMerge={true}
                         lazyUpdate={true}
                         style={{ height: 500 }}/>
@@ -249,7 +249,7 @@ export default class Pie extends React.Component {
                 <Card title="饼形图之三" style={{marginTop:10}}>
                     <ReactEcharts
                         option={this.getOption3()}
-                        theme={Utils.getEchartRegisterThemeName()}
+                        theme={Utils.getEchartsRegisterThemeName()}
                         notMerge={true}
                         lazyUpdate={true}
                         style={{ height: 500 }}/>
@@ -257,4 +257,5 @@ export default class Pie extends React.Component {
             </div>
         );
     }
+
 }

@@ -12,16 +12,17 @@ import 'echarts/lib/component/title';
 import 'echarts/lib/component/legend';
 import 'echarts/lib/component/markPoint';
 import Utils from "../../../utils/utils";
+
 export default class Line extends React.Component {
 
     state = {}
 
     componentWillMount(){
-        echarts.registerTheme( Utils.getEchartRegisterThemeName(),echartTheme);
+        echarts.registerTheme( Utils.getEchartsRegisterThemeName(),echartTheme);
     }
 
     getOption() {
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单'
             },
@@ -57,20 +58,19 @@ export default class Line extends React.Component {
                     ]
                 }
             ]
-        }
-        return option;
+        };
     }
 
     getOption2() {
-        let option = {
+        return {
             title: {
                 text: '用户骑行订单'
             },
             tooltip: {
                 trigger: 'axis'
             },
-            legend:{
-                data:['OFO订单量','摩拜订单量']
+            legend: {
+                data: ['OFO订单量', '摩拜订单量']
             },
             xAxis: {
                 data: [
@@ -116,8 +116,7 @@ export default class Line extends React.Component {
                     ]
                 },
             ]
-        }
-        return option;
+        };
     }
 
     getOption3() {
@@ -170,7 +169,7 @@ export default class Line extends React.Component {
                 <Card title="折线图表之一">
                     <ReactEcharts
                         option={this.getOption()}
-                        theme={Utils.getEchartRegisterThemeName()}
+                        theme={Utils.getEchartsRegisterThemeName()}
                         notMerge={true}
                         lazyUpdate={true}
                         style={{
@@ -180,7 +179,7 @@ export default class Line extends React.Component {
                 <Card title="折线图表之二" style={{marginTop:10}}>
                     <ReactEcharts
                         option={this.getOption2()}
-                        theme={Utils.getEchartRegisterThemeName()}
+                        theme={Utils.getEchartsRegisterThemeName()}
                         notMerge={true}
                         lazyUpdate={true}
                         style={{
@@ -190,7 +189,7 @@ export default class Line extends React.Component {
                 <Card title="折线图表之三" style={{marginTop:10}}>
                     <ReactEcharts
                         option={this.getOption3()}
-                        theme={Utils.getEchartRegisterThemeName()}
+                        theme={Utils.getEchartsRegisterThemeName()}
                         notMerge={true}
                         lazyUpdate={true}
                         style={{
