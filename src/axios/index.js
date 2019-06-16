@@ -38,10 +38,10 @@ export default class Axios {
                     loading = document.getElementById('ajaxLoading');
                     loading.style.display = 'none';
                 }
-                if (response !== null && response.status == '200'){
+                if (response !== null && response.status === '200'){
                     // console.log("response:" + response.data.result)
                     let res = response.data;
-                    if (res.code == '0'){
+                    if (res.code === '0'){
                         // console.log("result:" + res.message)
                         resolve(res);
                     }else{

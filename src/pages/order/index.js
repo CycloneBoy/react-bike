@@ -1,10 +1,9 @@
 import React from 'react';
-import { Card, Button, Table, Form, Select, Modal, DatePicker, message} from 'antd'
+import { Card, Button, Table, Form, Modal, message} from 'antd'
 import axios from '../../axios'
 import Utils from '../../utils/utils'
 import BaseForm from '../../components/BaseForm'
 const FormItem = Form.Item;
-const Option = Select.Option;
 
 export default class Order extends React.Component{
 
@@ -63,7 +62,7 @@ export default class Order extends React.Component{
                 isShowLoading:true
             }
         }).then((res)=>{
-            if(res.code == '0'){
+            if(res.code === '0'){
                 let list = res.data.result.map((item,index)=>{
                     item.key = index;
                     return item;
@@ -78,19 +77,6 @@ export default class Order extends React.Component{
                 })
             }
         })
-    };
-
-    // 返回选中的一行
-    checkSelectItem =()=>{
-        let item = this.state.selectedItem;
-        if (!item) {
-            Modal.info({
-                title: '信息',
-                content: '请先选择一条订单'
-            });
-            return;
-        }
-        return item;
     };
 
     // 打开订单详情页面
@@ -123,10 +109,10 @@ export default class Order extends React.Component{
                 orderId: item.id
             }
         }).then((res)=> {
-            if (res.code == '0') {
+            if (res.code === '0') {
                 this.setState({
                     orderInfo:res.data,
-                    orderConfirmVisble: true
+                    orderConfirmVisible: true
                 })
             }
         });
@@ -142,11 +128,11 @@ export default class Order extends React.Component{
                 orderId: item.id
             }
         }).then((res) => {
-            if (res.code == 0) {
+            if (res.code === 0) {
                     message.success('订单结束成功')
                 this.setState({
-                    orderConfirmVisble: false
-                })
+                    orderConfirmVisible: false
+                });
                 this.requestList();
             }
         })
@@ -161,7 +147,6 @@ export default class Order extends React.Component{
     };
 
     handleModify =(item) =>{
-        let id = item.id;
         Modal.confirm({
             title:"修改",
             content:"你确认要修改此条数据吗？",
@@ -173,7 +158,6 @@ export default class Order extends React.Component{
     };
 
     handleDelete =(item) =>{
-        let id = item.id;
         Modal.confirm({
             title:"确认",
             content:"你确认要删除此条数据吗？",
@@ -183,7 +167,6 @@ export default class Order extends React.Component{
             }
         })
     };
-
 
     render() {
         const columns = [
@@ -285,10 +268,10 @@ export default class Order extends React.Component{
                 </div>
                 <Modal
                     title="结束订单"
-                    visible={this.state.orderConfirmVisble}
+                    visible={this.state.orderConfirmVisible}
                     onCancel={()=>{
                         this.setState({
-                            orderConfirmVisble:false
+                            orderConfirmVisible:false
                         })
                     }}
                     onOk={this.handleFinishOrder}

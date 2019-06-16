@@ -17,10 +17,10 @@ export default {
         if(!data){
             return [];
         }
-        let options = []; //[<Option value="0" key="all_key">全部</Option>];
-        data.map((item)=>{
+        let options = [];
+        data.map((item)=>(
             options.push(<Option value={parseInt(item.id)} key={item.id}>{item.name}</Option>)
-        });
+        ));
         return options;
     },
 
@@ -166,14 +166,6 @@ export default {
         return config[state]
     },
 
-    getSelectOption(list){
-        let opList = []
-         list.map((item,index)=>{
-             opList.push( "<Option value=" + item.key+ ">" + item.value_+"</Option>")
-        });
-        return opList;
-    },
-
     // 订单状态
     getOrderStatusList(){
         return  [
@@ -188,6 +180,10 @@ export default {
          return this.getDicValue(this.getOrderStatusList(),state);
     },
 
+    // 获取echart注册名称
+    getEchartRegisterThemeName(){
+        return "echartsTheme"
+    },
 
 
 }

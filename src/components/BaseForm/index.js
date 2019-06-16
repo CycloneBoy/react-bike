@@ -1,8 +1,7 @@
 import React from 'react'
-import { Input, Select, Form, Button, Checkbox, Radio, DatePicker} from 'antd'
+import { Input, Select, Form, Button, Checkbox, DatePicker} from 'antd'
 import Utils from '../../utils/utils';
 const FormItem = Form.Item;
-const Option = Select.Option;
 
 /**
  * 通用的过滤表格

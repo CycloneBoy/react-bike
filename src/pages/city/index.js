@@ -33,8 +33,7 @@ export default class City extends React.Component {
                 isShowLoading:true
             }
         }).then((res)=>{
-            if(res.code == '0'){
-                console.info("getdata: " + res.data);
+            if(res.code === '0'){
                 let list = res.data.result.map((item,index)=>{
                     item.key = index;
                     return item;
@@ -51,31 +50,28 @@ export default class City extends React.Component {
     };
 
     handleChange = (pagination, filters, sorter)=>{
-        console.log("::" + sorter)
         this.setState({
             sortOrder:sorter.order
         })
     };
 
     handleModify =(item) =>{
-        let id = item.id;
         Modal.confirm({
             title:"修改",
             content:"你确认要修改此条数据吗？",
             onOk:()=>{
-                message.success('修改成功！')
+                message.success('修改成功！');
                 this.request();
             }
         })
     };
 
     handleDelete =(item) =>{
-        let id = item.id;
         Modal.confirm({
             title:"确认",
             content:"你确认要删除此条数据吗？",
             onOk:()=>{
-                message.success('删除成功！')
+                message.success('删除成功！');
                 this.request();
             }
         })
@@ -98,11 +94,11 @@ export default class City extends React.Component {
                 body:cityInfo
             }
         }).then((res)=> {
-            if (res.code == '0') {
+            if (res.code === '0') {
                 message.success('开通成功');
                 this.setState({
                     isShowOpenCity:false
-                })
+                });
                 this.request();
             }
         })
@@ -129,7 +125,7 @@ export default class City extends React.Component {
                 title: '用车模式',
                 dataIndex: 'mode',
                 render(mode){
-                    return mode ==1 ?'停车点':'禁停区';
+                    return mode ===1 ?'停车点':'禁停区';
                 },
                 sorter:(a,b)=>{
                     return a.mode - b.mode;
@@ -138,7 +134,7 @@ export default class City extends React.Component {
                 title: '营运模式',
                 dataIndex: 'opMode',
                 render(opMode) {
-                    return opMode == 1 ? '自营' : (opMode == 2 ? '加盟' : '其他');
+                    return opMode === 1 ? '自营' : (opMode === 2 ? '加盟' : '其他');
                 },
                 sorter:(a,b)=>{
                     return a.opMode - b.opMode;
@@ -238,7 +234,6 @@ class FilterForm extends React.Component{
                                 style={{ width: 120 }}
                                 placeholder="全部"
                             >
-
                                 <Option value="0">全部</Option>
                                 <Option value="1">指定停车点模式</Option>
                                 <Option value="2">禁停区模式</Option>

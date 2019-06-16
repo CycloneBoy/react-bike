@@ -1,5 +1,4 @@
 import React from 'react'
-import Utils from '../../utils/utils'
 import {Table} from 'antd'
 import  "./index.less"
 export default class ETable extends React.Component {
@@ -8,14 +7,14 @@ export default class ETable extends React.Component {
     //处理行点击事件
     onRowClick = (record, index) => {
         let rowSelection = this.props.rowSelection;
-        if(rowSelection == 'checkbox'){
+        if(rowSelection === 'checkbox'){
             let selectedRowKeys = this.props.selectedRowKeys;
             let selectedIds = this.props.selectedIds;
             let selectedItem = this.props.selectedItem || [];
             if (selectedIds) {
                 const i = selectedIds.indexOf(record.id);
-                if (i == -1) {//避免重复添加
-                    selectedIds.push(record.id)
+                if (i === -1) {//避免重复添加
+                    selectedIds.push(record.id);
                     selectedRowKeys.push(index);
                     selectedItem.push(record);
                 }else{
@@ -25,14 +24,14 @@ export default class ETable extends React.Component {
                 }
             } else {
                 selectedIds = [record.id];
-                selectedRowKeys = [index]
+                selectedRowKeys = [index];
                 selectedItem = [record];
             }
             this.props.updateSelectedItem(selectedRowKeys,selectedItem || {},selectedIds);
         }else{
             let selectKey = [index];
             const selectedRowKeys = this.props.selectedRowKeys;
-            if (selectedRowKeys && selectedRowKeys[0] == index){
+            if (selectedRowKeys && selectedRowKeys[0] === index){
                 return;
             }
             this.props.updateSelectedItem(selectKey,record || {});
@@ -43,10 +42,8 @@ export default class ETable extends React.Component {
     onSelectChange = (selectedRowKeys, selectedRows) => {
         let rowSelection = this.props.rowSelection;
         const selectedIds = [];
-        if(rowSelection == 'checkbox'){
-            selectedRows.map((item)=>{
-                selectedIds.push(item.id);
-            });
+        if(rowSelection === 'checkbox'){
+            selectedRows.map((item)=>(selectedIds.push(item.id)));
             this.setState({
                 selectedRowKeys,
                 selectedIds:selectedIds,
@@ -117,7 +114,7 @@ export default class ETable extends React.Component {
         // 当属性未false或者null时，说明没有单选或者复选列
         if(row_selection===false || row_selection === null){
             row_selection = false;
-        }else if(row_selection == 'checkbox'){
+        }else if(row_selection === 'checkbox'){
             //设置类型未复选框
             rowSelection.type = 'checkbox';
         }else{

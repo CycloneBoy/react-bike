@@ -1,9 +1,9 @@
 import React from 'react';
 import {Card,Form,Button,Input,Checkbox,Radio,Select,Switch,DatePicker,TimePicker,Upload,Icon,message, InputNumber} from 'antd'
 import moment from 'moment'
+import Utils from "../../utils/utils";
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
-const Option = Select.Option;
 const TextArea = Input.TextArea;
 class  FormRegister extends React.Component{
 
@@ -141,12 +141,7 @@ class  FormRegister extends React.Component{
                                     initialValue:"2",
                                 })(
                                     <Select>
-                                        <Option value="1">工作</Option>
-                                        <Option value="2">学习</Option>
-                                        <Option value="3">休息</Option>
-                                        <Option value="4">旅行</Option>
-                                        <Option value="5">创业</Option>
-                                        <Option value="6">其他</Option>
+                                        {Utils.getOptionList(Utils.getStateList())}
                                     </Select>
                                 )}
                         </FormItem>
@@ -156,15 +151,7 @@ class  FormRegister extends React.Component{
                                     initialValue:['2','4'],
                                 })(
                                     <Select mode="multiple">
-                                        <Option value="1">骑行</Option>
-                                        <Option value="2">跑步</Option>
-                                        <Option value="3">打球</Option>
-                                        <Option value="4">玩游戏</Option>
-                                        <Option value="5">徒步</Option>
-                                        <Option value="6">看剧</Option>
-                                        <Option value="7">学习</Option>
-                                        <Option value="8">读书</Option>
-                                        <Option value="9">其他</Option>
+                                        {Utils.getOptionList(Utils.getInterestList())}
                                     </Select>
                                 )}
                         </FormItem>
@@ -211,7 +198,7 @@ class  FormRegister extends React.Component{
                                         action="//jsonplaceholder.typicode.com/"
                                         onChange={this.handleChange}
                                     >
-                                        {this.state.userImg ? <img src={this.state.userImg}/>: <Icon type="plus"/>}
+                                        {this.state.userImg ? <img src={this.state.userImg} alt=""/>: <Icon type="plus"/>}
                                     </Upload>
                                 )}
                         </FormItem>
@@ -221,7 +208,7 @@ class  FormRegister extends React.Component{
                                 valuePropName:'checked'
                             })(
                                 <Checkbox>我已经阅读过
-                                    <a href='#'>环球车队协议</a>
+                                    <a href='/'>环球车队协议</a>
                                 </Checkbox>
                             )}
                         </FormItem>

@@ -111,21 +111,24 @@ const menuList = [
         icon: 'fire',
     },
     {
-        title: '图标',
+        title: '图表',
         key: '/charts',
         icon: 'instagram',
         children: [
             {
                 title: '柱形图',
-                key: '/charts/bar'
+                key: '/charts/bar',
+                icon: 'bar-chart'
             },
             {
                 title: '饼图',
-                key: '/charts/pie'
+                key: '/charts/pie',
+                icon: 'pie-chart'
             },
             {
                 title: '折线图',
-                key: '/charts/line'
+                key: '/charts/line',
+                icon: 'line-chart'
             },
         ]
     },

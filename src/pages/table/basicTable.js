@@ -47,9 +47,7 @@ export default class BasicTable  extends React.Component{
                 time: '09:00'
             },
         ];
-        data.map((item,index)=>{
-            item.key = index;
-        });
+        data.map((item,index)=>(item.key = index));
         this.setState({
             dataSource :data
         });
@@ -68,11 +66,9 @@ export default class BasicTable  extends React.Component{
                 isShowLoading:true
             }
         }).then((res)=>{
-            if(res.code == '0'){
+            if(res.code === '0'){
                 console.info("getdata: " + res.data);
-                res.data.result.map((item,index)=>{
-                    item.key = index;
-                });
+                res.data.result.map((item,index)=>(item.key = index));
                 this.setState({
                     dataSource2:res.data.result,
                     selectedRowKeys:[],
@@ -173,8 +169,8 @@ export default class BasicTable  extends React.Component{
                 key: 'action',
                 render: () => (
                     <span>
-                         <a href="#">修改</a>
-                        <a href="#">删除</a>
+                         <a href="/">修改</a>
+                        <a href="/">删除</a>
                      </span>
                 ),
             },

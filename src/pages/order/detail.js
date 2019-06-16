@@ -26,7 +26,7 @@ export default class Detail extends React.Component{
                 isShowLoading:true
             }
         }).then((res)=>{
-            if(res.code ==0){
+            if(res.code ===0){
                 this.setState({
                     orderInfo:res.data
                 })

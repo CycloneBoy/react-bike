@@ -14,6 +14,10 @@ import BasicTable from "./pages/table/basicTable";
 import City from "./pages/city";
 import Order from "./pages/order";
 import User from "./pages/user";
+import Bar from "./pages/echarts/bar";
+import Line from "./pages/echarts/line";
+import Pie from "./pages/echarts/pie";
+
 
 export default class ERouter extends React.Component{
 
@@ -40,6 +44,9 @@ export default class ERouter extends React.Component{
                                     <Route path="/city" component={City} />
                                     <Route path="/order" component={Order} />
                                     <Route path="/user" component={User} />
+                                    <Route path="/charts/bar" component={Bar} />
+                                    <Route path="/charts/pie" component={Pie} />
+                                    <Route path="/charts/line" component={Line} />
                                     <Redirect to="/home" />
                                 </Switch>
                             </Admin>

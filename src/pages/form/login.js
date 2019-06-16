@@ -109,7 +109,7 @@ class  FormLogin extends React.Component{
                             })(
                                 <Checkbox>记住密码</Checkbox>
                             )}
-                            <a href="#" style={{float:'right'}}>忘记密码？</a>
+                            <a href="/" style={{float:'right'}}>忘记密码？</a>
                         </FormItem>
                         <FormItem>
                             <Button type="primary" onClick={this.handleSubmit} >

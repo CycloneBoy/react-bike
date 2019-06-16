@@ -45,9 +45,7 @@ export default class HighTable  extends React.Component{
                 time: '09:00'
             },
         ];
-        data.map((item,index)=>{
-            item.key = index;
-        });
+        data.map((item,index)=>( item.key = index));
         this.setState({
             dataSource :data
         });
@@ -66,11 +64,8 @@ export default class HighTable  extends React.Component{
                 isShowLoading:true
             }
         }).then((res)=>{
-            if(res.code == '0'){
-                console.info("getdata: " + res.data);
-                res.data.result.map((item,index)=>{
-                    item.key = index;
-                });
+            if(res.code === '0'){
+                res.data.result.map((item,index)=>(item.key = index));
                 this.setState({
                     dataSource2:res.data.result,
                     selectedRowKeys:[],
@@ -97,19 +92,17 @@ export default class HighTable  extends React.Component{
     };
 
     handleModify =(item) =>{
-        let id = item.id;
         Modal.confirm({
             title:"修改",
             content:"你确认要修改此条数据吗？",
             onOk:()=>{
-                message.success('修改成功！')
+                message.success('修改成功！');
                 this.request();
             }
         })
     };
 
     handleDelete =(item) =>{
-        let id = item.id;
         Modal.confirm({
             title:"确认",
             content:"你确认要删除此条数据吗？",
@@ -121,31 +114,12 @@ export default class HighTable  extends React.Component{
     };
 
     handleChange = (pagination, filters, sorter)=>{
-        console.log("::" + sorter)
         this.setState({
             sortOrder:sorter.order
         })
-    }
+    };
 
     render() {
-        const selectedRowKeys = this.state.selectedRowKeys;
-        const  rowSelection = {
-            type: 'radio',
-            selectedRowKeys
-        };
-
-        const rowCheckSelection = {
-            type: 'checkbox',
-            selectedRowKeys,
-            onChange: (selectedRowKeys, selectedRows) => {
-                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-                this.setState({
-                    selectedRowKeys,
-                    selectedRows
-                })
-            },
-        };
-
         const columns = [
             {
                 title: 'id',
