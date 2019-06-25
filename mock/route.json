@@ -1,0 +1,18 @@
+{
+  "/api/*": "/$1",
+  "/:resource/:id/show": "/:resource/:id",
+  "/posts/:category": "/posts?category=:category",
+  "/articles\\?id=:id": "/posts/:id",
+  "/user": "/user",
+  "/user/edit": "/base",
+  "/user/delete": "/base",
+  "/user/add": "/base",
+  "/role": "/role",
+  "/order/detail": "/orderDetail",
+  "/order/finishorder": "/orderFinishorder",
+  "/order/stop": "/orderStop",
+  "/order": "/order",
+  "/city/open": "/base",
+  "/city": "/city",
+  "/table/list": "/table"
+}

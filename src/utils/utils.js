@@ -185,5 +185,17 @@ export default {
         return "echartsTheme"
     },
 
+    // 获取用户状态列表
+    getUserStatusList(){
+        return  [
+            { id: '0', name: '删除' },
+            { id: '1', name: '启用' },
+            { id: '2', name: '停用' }
+        ];
+    },
 
+    // 用户状态词典
+    userStatusDic(state){
+        return this.getDicValue(this.getUserStatusList(),state);
+    },
 }

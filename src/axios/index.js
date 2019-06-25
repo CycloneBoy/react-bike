@@ -24,13 +24,14 @@ export default class Axios {
             loading = document.getElementById('ajaxLoading');
             loading.style.display = 'block';
         }
-        let baseApi = 'https://easy-mock.com/mock/5cf380b5cfcb92308b8d04cd/react-bike';
+        // let baseApi = 'https://easy-mock.com/mock/5cf380b5cfcb92308b8d04cd/react-bike';
+        let baseApi = 'http://localhost:8086/';
         return new Promise((resolve,reject) =>{
             axios({
                 url: options.url,
                 method: options.method,
                 baseURL: baseApi,
-                timeout: 10000,
+                timeout: 3000,
                 params: options.params || '',
                 data : options.data|| ''
             }).then((response)=>{

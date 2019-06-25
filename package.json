@@ -13,6 +13,7 @@
     "jsonp": "^0.2.1",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "mockjs": "^1.0.1-beta3",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-app-rewired": "^2.1.3",
@@ -27,7 +28,8 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "mock":  "json-server --watch -c mock/json-server.json mock/api.js "
   },
   "eslintConfig": {
     "extends": "react-app"

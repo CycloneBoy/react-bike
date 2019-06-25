@@ -17,6 +17,7 @@ import User from "./pages/user";
 import Bar from "./pages/echarts/bar";
 import Line from "./pages/echarts/line";
 import Pie from "./pages/echarts/pie";
+import Permission from "./pages/permission";
 
 
 export default class ERouter extends React.Component{
@@ -47,6 +48,7 @@ export default class ERouter extends React.Component{
                                     <Route path="/charts/bar" component={Bar} />
                                     <Route path="/charts/pie" component={Pie} />
                                     <Route path="/charts/line" component={Line} />
+                                    <Route path="/permission" component={Permission} />
                                     <Redirect to="/home" />
                                 </Switch>
                             </Admin>

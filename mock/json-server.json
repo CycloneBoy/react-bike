@@ -1,0 +1,10 @@
+{
+  "port": 8086,
+  "watch": true,
+  "static": "./mock",
+  "read-only": false,
+  "no-cors": false,
+  "no-gzip": false,
+  "routes": "mock/route.json",
+  "middlewares": "mock/middlewares.js"
+}
